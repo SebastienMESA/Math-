@@ -1,7 +1,3 @@
-Petit Markdown pour tenter de vous expliquer au mieux ce que j'ai compris des fonctions **Math.random()**, **Math.ceil()** et **Math.floor()**, si ça peut aider quelqu'un tant mieux.
-
-:danger: Petit disclaimer, je suis aussi expérimenté que vous donc toutes les infos ci-dessous restent à vérifier !
-
 # "Il nous emmerdent les Math...()"
 
 ## Le Math.random()
@@ -11,7 +7,7 @@ Petit Markdown pour tenter de vous expliquer au mieux ce que j'ai compris des fo
 ```
 const random = Math.random();
 
-console.log(random) => ( **JE SUIS LA CONSOLE** exemple 1 : 0.0155949863, exemple 2 : 0.84321563)
+console.log(random) // => ( **JE SUIS LA CONSOLE** exemple 1 : 0.0155949863, exemple 2 : 0.84321563)
 ```
 
 - Du coup, si on veut un nombre aléatoire entre 0 **inclus** et 10 **exclus** ? Comment qu'on fait donc ? 
@@ -23,7 +19,7 @@ si on reprends les exemples ci-dessus mais en multipliant par 10 :
 ```
 const random = Math.random() * 10;
 
-console.log(random) => ( **JE SUIS LA CONSOLE** exemple 1 : 0.155949863, exemple 2 : 8.4321563)
+console.log(random) // => ( **JE SUIS LA CONSOLE** exemple 1 : 0.155949863, exemple 2 : 8.4321563)
 ```
 
 ## Le Math.floor() et le Math.ceil()
@@ -36,13 +32,13 @@ console.log(random) => ( **JE SUIS LA CONSOLE** exemple 1 : 0.155949863, exemple
 
 const nombreDécimal = 4.45659834
 
-console.log(Math.floor(nombreDécimal)) => ( **JE SUIS LA CONSOLE** : 4)
+console.log(Math.floor(nombreDécimal)) // => ( **JE SUIS LA CONSOLE** : 4)
 
 //EXEMPLE 2
 
 const nombreDécimal = 5.9999999999
 
-console.log(Math.floor(nombreDécimal)) => ( **JE SUIS LA CONSOLE** : 5)
+console.log(Math.floor(nombreDécimal)) // => ( **JE SUIS LA CONSOLE** : 5)
 ```
 
 - A l'inverse **Math.ceil()** permet d'arrondir à l'entier **supérieur**, par exemple :
@@ -51,12 +47,12 @@ console.log(Math.floor(nombreDécimal)) => ( **JE SUIS LA CONSOLE** : 5)
 //EXEMPLE 1
 
 const nombreDécimal = 4.45659834
-console.log(Math.ceil(nombreDécimal)) => ( **JE SUIS LA CONSOLE** : 5)
+console.log(Math.ceil(nombreDécimal)) // => ( **JE SUIS LA CONSOLE** : 5)
 
 //EXEMPLE 2 
 
 const nombreDécimal = 5.00000001
-console.log(Math.ceil(nombreDécimal)) => ( **JE SUIS LA CONSOLE** : 6)
+console.log(Math.ceil(nombreDécimal)) // => ( **JE SUIS LA CONSOLE** : 6)
 ```
 
 _* POUR INFO : En anglais, floor veut dire le sol, le "par-terre" ce qu'il y a sous nos pieds. Ceiling veut dire le plafond. Ça peut aider pour se souvenir_
@@ -75,9 +71,9 @@ Avec ce qu'on a vu au-dessus en faite on sait déjà le faire :
 //EXEMPLE
 
 const random = Math.random() * 10;
-console.log(random) => ( **JE SUIS LA CONSOLE** exemple 1 : 1.245657156, exemple 2 : 8.02126374)
+console.log(random) // => ( **JE SUIS LA CONSOLE** exemple 1 : 1.245657156, exemple 2 : 8.02126374)
 
-console.log(Math.floor(random)) => ( **JE SUIS LA CONSOLE** exemple 1 : 1, exemple 2 : 8)
+console.log(Math.floor(random)) // => ( **JE SUIS LA CONSOLE** exemple 1 : 1, exemple 2 : 8)
 ```
 
 Mais du coup si on ne veut pas s'embêter avec des variables qui nous donnent des nombres décimaux dont on se fout, on peut tout faire d'un coup :
@@ -86,7 +82,7 @@ Mais du coup si on ne veut pas s'embêter avec des variables qui nous donnent de
 //EXEMPLE 
 
 const randomInteger = Math.floor(Math.random() * 10)
-console.log(randomInteger) => ( **JE SUIS LA CONSOLE** exemple 1 : 1, exemple 2 : 8)
+console.log(randomInteger) // => ( **JE SUIS LA CONSOLE** exemple 1 : 1, exemple 2 : 8)
 ```
 ### _"Ok cool, mais moi je veux générer aléatoirement un nombre entier compris entre 0 **inclus** et 10 **inclus**"_
 
